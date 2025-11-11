@@ -1,2 +1,6 @@
-# multimodal_arch
-Arquitectura multimodal entrenada con el dataset fashion mnist
+# Arquitectura multimodal entrenada con el dataset fashion mnist
+
+El objetivo del proyecto consiste en realizar las siguientes actividades:
+Realizar un proceso de Transfer Learning desde una arquitectura elegida por el estudiante que haya sido entrenada con el MNIST (clasificación de dígitos). El objetivo es transferir los pesos exclusivamente de las capas convolucionales y reestructurar la capa completamente conectada (según criterio del estudiante). Para las capas convolucionales realizar diferentes pruebas con respecto a si las capas se dejan entrenables o no entrenables hasta obtener resultados satisfactorios.
+Generar una arquitectura multimodal con 3 ramas, la primera es una arquitectura convolucional 2D a elección del estudiante, la segunda rama es la arquitectura de Transfer Learning del punto anterior con las capas convolucionales no entrenables y la tercera rama es la imagen vectorizada (1D) utilizando convoluciones 1D según criterio del estudiante. Luego se deben concatenar las características generadas por las salidas de las 3 ramas para enviar a una arquitectura de capas completamente conectadas diseñadas por el estudiante.
+Tomar la última capa convolucional de la arquitectura multimodal ENTRENADA anteriormente y obtener el vector de características (Flatten) para las imágenes de entrenamiento, luego entrenar con estás características 5 clasificadores (según criterio del estudiante desde Sklearn) de ML para luego realizar la predicción final por votación.
